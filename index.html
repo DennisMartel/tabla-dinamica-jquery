@@ -1,0 +1,60 @@
+<!DOCTPYE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> Administrar tabla con Jquery </title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+
+	<div class="container">
+		<h1> Lista de prodoctos </h1>
+		<form action="" method="post">
+			<table id="lista_productos" class="table table-striped">
+				<thead>
+					<tr>
+						<th> Nombre </th>
+						<th> Descripción </th>
+						<th> Precio </th>
+						<th>  </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>  
+							<input type="text" name="nombre[]" class="nombre" placeholder="Nombre" />
+						</td>
+						<td>
+							<textarea name="descripcion[]" class="descripcion" placeholder="Descripción" width="100%"></textarea>
+						</td>
+						<td>
+							<input type="number" name="precio[]" class="precio" placeholder="Precio" /> 
+						</td>
+						<td> 
+							<button type="button" class="btn btn-danger button_eliminar_producto"> Eliminar </button> 
+						</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="3">  </td>
+						<td>
+							<button type="button" class="btn btn-success button_agregar_producto"> Agregar </button>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+		</form>
+	</div>
+
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/productos.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			productos();
+		});
+	</script>
+
+</body>
+</html>
